@@ -1,0 +1,17 @@
+{
+  "author": "Dione Adam",
+  "name": "food-delivery-app",
+  "description": "Simple sns-sqs app using localstack",
+  "version": "0.1.0",
+  "main": "app",
+  "dependencies": {
+    "aws-sdk"     : "2.1257.0",
+    "sqs-consumer": "5.7.0"
+  },
+  "scripts": {
+    "publish-order-ready"  : "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy MESSAGE_ENV='ORDER_READY'   node order/order-publisher.js",
+    "publish-order-created": "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy MESSAGE_ENV='ORDER_CREATED' node order/order-publisher.js",
+    "chat-worker"          : "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy                             node chat/chat-worker.js",
+    "logistic-service"     : "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy                             node logistic/logistic-service.js"
+  }
+}

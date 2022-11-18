@@ -1,0 +1,19 @@
+{
+  "author": "Dione Adam",
+  "name": "gb",
+  "description": "Sample sns sqs system using docker and localstack",
+  "version": "0.1.0",
+  "main": "app",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "async": "0.9.x",
+    "aws-sdk": "^2.1257.0",
+    "sqs-consumer": "^5.7.0",
+    "util": "0.10.x"
+  },
+  "scripts": {
+    "start": "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy node chat-worker.js"
+  }
+}
